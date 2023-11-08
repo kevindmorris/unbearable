@@ -10,7 +10,7 @@ interface CurrentActivityState {
 export const useCurrentActivityStore = create<CurrentActivityState>((set) => ({
   activity: null,
   fetchActivity: async () => {
-    const response = await fetch("http://www.boredapi.com/api/activity/");
+    const response = await fetch("https://www.boredapi.com/api/activity/");
     set({ activity: await response.json() });
   },
 }));
